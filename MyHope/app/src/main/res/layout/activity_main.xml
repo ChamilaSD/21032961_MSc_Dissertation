@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_bg"
+    tools:context="com.chams.myhope.MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bnSpeachNow"
+        android:text="Speaker"
+        android:textSize="48sp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/loutScroll"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:background="@color/transparent">
+
+
+        <HorizontalScrollView
+            android:id="@+id/hScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+            <LinearLayout
+                android:id="@+id/loutTop"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/bnFirst"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_bg"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnSpeech"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/speech"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnObject"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/traffic_sign"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnColor"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/color"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnLocation"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/location"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnCurrency"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/currency"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnTime"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/time"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnDate"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/date"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/bnLanguage"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/language"/>
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/bnLast"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_bg"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/loutJavaCamera"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="visible">-->
+        <org.opencv.android.JavaCameraView
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:visibility="visible"
+            android:id="@+id/opencvObjectView"
+            opencv:show_fps="true"
+            opencv:camera_id="any"
+            android:layout_gravity="center"/>
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvColorName"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvColorHex"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red"
+                android:id="@+id/tvRgbRed"
+                android:paddingRight="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Green"
+                android:id="@+id/tvRgbGreen"
+                android:paddingRight="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blue"
+                android:id="@+id/tvRgbBlue" />
+
+        </LinearLayout>
+
+        <SurfaceView
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:id="@+id/surfaceView"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take photo"
+            android:id="@+id/takePicture"
+            android:layout_gravity="center_horizontal" />
+
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Enlarge"-->
+        <!--android:id="@+id/btEnlarge"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:onClick="enlargeScreen"/>-->
+
+    </LinearLayout>
+</RelativeLayout>
